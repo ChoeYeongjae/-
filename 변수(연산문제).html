@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+        
+    <!--
+    1.X , Y 입력할 폼 만들기  
+    2.입력한 결과값 연산하는 함수(eval)가져오기
+    3.버튼클릭시 onclick()를 통해서 입력한값 함수로 인자로 보낸후 alert()를 통해서 결과값 리턴 
+    -->    
+    
+    <form action="">
+        <input type="text" name="opvalues"><br>
+        <input type="button" value="버튼" onclick="operation(opvalues.value)">
+    </form>
+    
+    <script type="text/javascript">
+
+    function operation(opvaluse){
+        alert(eval(opvaluse));
+    }
+
+     </script>
+    
+    
+     <!--
+     사용자가 입력받을수있는 함수 prompt , confirm
+     1.정수 X , Y 값받기 
+     1-1.변수에는 문자,숫자,논리,null,undefine,클래스,객체 저장가능 
+     2. X , Y , OP 조건에 맞게  더하기 , 뺄샘 , 곱하기 , 나눗셈 하기          
+     -->
+    
+      <script>
+    
+       var x = prompt('숫자입력해주세요 : X');
+       var op = prompt('연산을 입력해주세요');
+       var y = prompt('숫자입력해주세요 : Y');
+       
+       if(op == '+')
+       {
+       alert(parseInt(x)+parseInt(y));
+       }
+       else if(op == '-')
+       {
+       alert(parseInt(x)-parseInt(y));
+       }
+       else if(op == '/')
+       {
+       alert(parseInt(x)/parseInt(y));   
+       }
+       else if(op == '*')
+       {
+       alert(parseInt(x)*parseInt(y));   
+       }
+       
+       
+       </script>
+      
+  </body>
+</html>
